@@ -97,3 +97,7 @@ def portfoliodetails(request, portfolio_name):
         'portfolio': portfolio,
     }
     return render(request, "portfolio-details.html", data)
+
+
+def handling_404(request,exception):
+    return render(request,"404.html")

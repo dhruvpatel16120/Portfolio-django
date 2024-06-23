@@ -25,7 +25,7 @@ urlpatterns = [
     path('',views.home,name="home"),
     path('<str:portfolio_name>/',views.portfoliodetails,name="portfoliodetails"),
 ]
-
+handler404 = 'Home.views.handling_404'
 
 # Add URL patterns for serving media files during development.
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
