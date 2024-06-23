@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{ portfolio.portfolio_name }}{% endblock  %}
+{% block description %}{{ data.keywords }}{% endblock  %}
+{% block keywords %}{{data.description }}{% endblock  %}
+
+{% block main %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfoio Details</h2>
+          <ol>
+            <li><a href="{% url "home" %}">Home</a></li>
+            <li>{{ data.portfolio_heading }}</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="/media/{{data.portfolio_image_1}}" alt="slide1">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/media/{{data.portfolio_image_2}}" alt="slide2">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/media/{{data.portfolio_image_3}}" alt="slide3">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: {{portfolio.portfolio_category}}</li>
+                <li><strong>Client</strong>: {{ data.portfolio_client }} </li>
+                <li><strong>Project date</strong>: {{ data.portfolio_project_date}}</li>
+                <li><strong>Project URL</strong>: <a href="{{data.portfolio_project_url }}">{{ data.portfolio_project_url}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>{{ data.portfolio_title}}</h2>
+              <p>
+               {{data.portfolio_description | safe}}
+              </p>
+            </div>
+          </div>
+          <a class="btn btn-primary m-4" href="{% url "home" %}">Back to home</a>
+        </div>
+      
+      </div>
+    </section>
+
+  </main>
+{% endblock main %}

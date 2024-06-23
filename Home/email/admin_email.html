@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Feedback</title>
+    <style>
+        /* Reset styles */
+        body, h1, h2, h3, p, ul, ol, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .feedback {
+            margin-bottom: 20px;
+        }
+        .feedback p {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contact Form Feedback</h1>
+        </div>
+        <div class="content">
+            <div class="feedback">
+                <p><strong>Name:</strong> {{ name }}</p>
+                <p><strong>Email:</strong> {{ email }}</p>
+                <p><strong>Subject:</strong> {{ subject }}</p>
+                <p><strong>Message:</strong></p>
+                <p>{{ message }}</p>
+            </div>
+            <div class="button-container">
+                <a href="https://dhruvpateloffical.vercel.app/admin/" class="button">Visit Admin Panel</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
