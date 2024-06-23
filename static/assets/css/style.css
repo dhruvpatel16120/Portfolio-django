@@ -281,14 +281,14 @@ h6 {
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
-    background: top center;
+  
   }
 }
 
 @media (max-width: 768px) {
   #hero {
     background: url('../img/hero-bg2.jpg');
-    background: top center;
+    background-position: top center;
   }
 
   #hero h1 {
