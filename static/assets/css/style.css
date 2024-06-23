@@ -286,9 +286,6 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero {
-    background: url('../img/hero-bg2.jpg');
-  }
 
   #hero h1 {
     font-size: 28px;
