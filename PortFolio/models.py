@@ -4,7 +4,7 @@ from django.db import models
 class Portfolio(models.Model):
     portfolio_category = models.CharField(max_length=100)
     portfolio_name = models.CharField(max_length=100)
-    portfolio_image = models.ImageField(upload_to='portfolio_images/')
+    portfolio_image = models.CharField(max_length=220)
     portfolio_url = models.CharField(max_length=233,default=1)
     date = models.DateField()
 
@@ -19,9 +19,9 @@ class PortfolioDetails(models.Model):
     portfolio_project_url = models.URLField()
     portfolio_title = models.CharField(max_length=255)
     portfolio_description = models.TextField()
-    portfolio_image_1 = models.ImageField(upload_to='portfolio_images/details/')
-    portfolio_image_2 = models.ImageField(upload_to='portfolio_images/details/')
-    portfolio_image_3 = models.ImageField(upload_to='portfolio_images/details/')
+    portfolio_image_1 = models.CharField(max_length=220)
+    portfolio_image_2 = models.CharField(max_length=220)
+    portfolio_image_3 = models.CharField(max_length=220)
     keywords = models.TextField(default="dhruvwebfolio")
     description = models.TextField(default="dhruv")
     date = models.DateField(auto_now_add=True)
