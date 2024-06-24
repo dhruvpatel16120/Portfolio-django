@@ -230,8 +230,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>{{ content.services.title }}</h2>
-          <p>{{ content.services.description }}</p>
+          <h2>{{ content.services.title|capfirst }}</h2>
+          <p>{{ content.services.description|capfirst }}</p>
          </div>
 
         <div class="row">
@@ -284,7 +284,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title">
-          <h2>{{ content.contact.title|capfirst}}</h2>
+          <h2>{{ content.contact.title|capfirst }}</h2>
           <p>{{ content.contact.description|capfirst }}</p>
           </div>
 
