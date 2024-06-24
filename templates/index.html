@@ -252,8 +252,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>{{ content..title|capfirst }}</h2>
-          <p>{{ content..description|capfirst }}</p>
+          <h2>{{ content.recommendation&review.title|capfirst }}</h2>
+          <p>{{ content.recommendation&review.description|capfirst }}</p>
           </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -284,8 +284,8 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title">
-          <h2>{{ content.contact.title }}</h2>
-          <p>{{ content.contact.description }}</p>
+          <h2>{{ content.contact.title|capfirst}}</h2>
+          <p>{{ content.contact.description|capfirst }}</p>
           </div>
 
         <div class="row" data-aos="fade-in">
