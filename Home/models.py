@@ -19,14 +19,14 @@ class Type_words(models.Model):
     
 class Description(models.Model):
     choice=(
-        ('About','About'),
-        ('Facts','Facts'),
-        ('Skills','Skills'),
-        ('Services','Services'),
-        ('Resume','Resume'),
-        ('Portfolio','Portfolio'),
-        ('Contact','Contact'),
-        ('Recommendation&Review','Recommendation&Review'),
+        ('about','About'),
+        ('facts','Facts'),
+        ('skills','Skills'),
+        ('services','Services'),
+        ('resume','Resume'),
+        ('portfolio','Portfolio'),
+        ('contact','Contact'),
+        ('recommendation&review','Recommendation&Review'),
     )
     title= models.CharField(max_length=220,choices=choice)
     description = models.TextField()
