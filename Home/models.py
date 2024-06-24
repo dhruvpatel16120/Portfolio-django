@@ -26,7 +26,7 @@ class Description(models.Model):
         ('resume','Resume'),
         ('portfolio','Portfolio'),
         ('contact','Contact'),
-        ('recommendation&review','Recommendation&Review'),
+        ('reviews','Reviews'),
     )
     title= models.CharField(max_length=220,choices=choice)
     description = models.TextField()
