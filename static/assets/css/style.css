@@ -1061,7 +1061,7 @@ section {
  background-color: var(--btn-color);
  border-radius: 1em;
  outline: none;
- margin-top: 15px;
+ margin-top: 15px !important;
  box-shadow: 0 0 1em .25em var(--glow-color),
         0 0 4em 1em var(--glow-spread-color),
         inset 0 0 .75em .25em var(--glow-color);
