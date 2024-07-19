@@ -23,6 +23,9 @@ from django.views.generic import TemplateView
 from .sitemaps import StaticViewSitemap
 from django.views.generic import TemplateView
 
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name="home"),
