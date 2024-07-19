@@ -19,7 +19,7 @@ from django.urls import path
 from Home import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.views.generic import TemplateView
+from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 from django.views.generic import TemplateView
 
