@@ -296,4 +296,23 @@
    */
   new PureCounter();
 
+  VANTA.BIRDS({
+  el: "#hero",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x0,
+  color1: 0x1e66cd,
+  color2: 0xf7147c,
+  birdSize: 1.90,
+  wingSpan: 39.00,
+  separation: 29.00,
+  alignment: 32.00,
+  cohesion: 45.00,
+  backgroundAlpha: 1.00
+   });
 })()
