@@ -15,5 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 application = get_wsgi_application()
-application = WhiteNoise(application)
 app = application #add here
