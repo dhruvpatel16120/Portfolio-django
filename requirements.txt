@@ -8,3 +8,4 @@ python-slugify==8.0.4
 sqlparse==0.4.4
 tzdata==2023.3
 python-dotenv==0.21.1
+whitenoise==6.4.0
