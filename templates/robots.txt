@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: /admin/
 Allow: /
-
 Sitemap: https://dhruvpatelofficial.vercel.app/sitemap.xml
