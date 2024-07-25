@@ -1,16 +1,5 @@
-/* -----------------------------------------------
-/* Author : Vincent Garreau  - vincentgarreau.com
-/* MIT license: http://opensource.org/licenses/MIT
-/* Demo / Generator : vincentgarreau.com/particles.js
-/* GitHub : github.com/VincentGarreau/particles.js
-/* How to use? : Check the GitHub README
-/* v2.0.0
-/* ----------------------------------------------- */
-
 var pJS = function(tag_id, params){
-
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
-
   /* particles.js variables with default values */
   this.pJS = {
     canvas: {
@@ -153,7 +142,6 @@ var pJS = function(tag_id, params){
     mode_repulse_distance: pJS.interactivity.modes.repulse.distance
   };
 
-
   pJS.fn.retinaInit = function(){
 
     if(pJS.retina_detect && window.devicePixelRatio > 1){
@@ -179,8 +167,6 @@ var pJS = function(tag_id, params){
     pJS.interactivity.modes.repulse.distance = pJS.tmp.obj.mode_repulse_distance * pJS.canvas.pxratio;
 
   };
-
-
 
   /* ---------- pJS functions - canvas ------------ */
 
@@ -226,7 +212,6 @@ var pJS = function(tag_id, params){
 
   };
 
-
   pJS.fn.canvasPaint = function(){
     pJS.canvas.ctx.fillRect(0, 0, pJS.canvas.w, pJS.canvas.h);
   };
@@ -234,7 +219,6 @@ var pJS = function(tag_id, params){
   pJS.fn.canvasClear = function(){
     pJS.canvas.ctx.clearRect(0, 0, pJS.canvas.w, pJS.canvas.h);
   };
-
 
   /* --------- pJS functions - particles ----------- */
 
@@ -359,11 +343,8 @@ var pJS = function(tag_id, params){
     // var theta = 2.0 * Math.PI * Math.random();
     // this.vx = Math.cos(theta);
     // this.vy = Math.sin(theta);
-
     this.vx_i = this.vx;
     this.vy_i = this.vy;
-
-    
 
     /* if shape is image */
 
@@ -392,10 +373,7 @@ var pJS = function(tag_id, params){
       }
     }
 
-    
-
   };
-
 
   pJS.fn.particle.prototype.draw = function() {
 
@@ -416,7 +394,7 @@ var pJS = function(tag_id, params){
     if(p.color.rgb){
       var color_value = 'rgba('+p.color.rgb.r+','+p.color.rgb.g+','+p.color.rgb.b+','+opacity+')';
     }else{
-      var color_value = 'hsla('+p.color.hsl.h+','+p.color.hsl.s+'%,'+p.color.hsl.l+'%,'+opacity+')';
+      var color_value = 'hsla('+p.color.hslh+','+p.color.hsl.s+'%,'+p.color.hsl.l+'%,'+opacity+')';
     }
 
     pJS.canvas.ctx.fillStyle = color_value;
@@ -495,7 +473,6 @@ var pJS = function(tag_id, params){
     pJS.canvas.ctx.fill();
     
   };
-
 
   pJS.fn.particlesCreate = function(){
     for(var i = 0; i < pJS.particles.number.value; i++) {
@@ -625,13 +602,9 @@ var pJS = function(tag_id, params){
           if(pJS.particles.move.bounce){
             pJS.fn.interact.bounceParticles(p,p2);
           }
-
         }
       }
-
-
     }
-
   };
 
   pJS.fn.particlesDraw = function(){
@@ -670,7 +643,6 @@ var pJS = function(tag_id, params){
 
   };
 
-
   /* ---------- pJS functions - particles interaction ------------ */
 
   pJS.fn.interact.linkParticles = function(p1, p2){
@@ -705,7 +677,6 @@ var pJS = function(tag_id, params){
 
   };
 
-
   pJS.fn.interact.attractParticles  = function(p1, p2){
 
     /* condensed particles */
@@ -724,11 +695,8 @@ var pJS = function(tag_id, params){
       p2.vx += ax;
       p2.vy += ay;
 
-    }
-    
-
+    }   
   }
-
 
   pJS.fn.interact.bounceParticles = function(p1, p2){
 
@@ -747,7 +715,6 @@ var pJS = function(tag_id, params){
 
   }
 
-
   /* ---------- pJS functions - modes events ------------ */
 
   pJS.fn.modes.pushParticles = function(nb, pos){
@@ -756,7 +723,7 @@ var pJS = function(tag_id, params){
 
     for(var i = 0; i < nb; i++){
       pJS.particles.array.push(
-        new pJS.fn.particle(
+        new pJS.fn.partile(
           pJS.particles.color,
           pJS.particles.opacity.value,
           {
@@ -772,9 +739,7 @@ var pJS = function(tag_id, params){
         pJS.tmp.pushing = false;
       }
     }
-
   };
-
 
   pJS.fn.modes.removeParticles = function(nb){
 
@@ -784,7 +749,6 @@ var pJS = function(tag_id, params){
     }
 
   };
-
 
   pJS.fn.modes.bubbleParticle = function(p){
 
@@ -877,7 +841,6 @@ var pJS = function(tag_id, params){
         }
       }
 
-
       function process(bubble_param, particles_param, p_obj_bubble, p_obj, id){
 
         if(bubble_param != particles_param){
@@ -949,7 +912,6 @@ var pJS = function(tag_id, params){
     
     }
 
-
     else if(pJS.interactivity.events.onclick.enable && isInArray('repulse', pJS.interactivity.events.onclick.mode)) {
 
       if(!pJS.tmp.repulse_finish){
@@ -1008,16 +970,11 @@ var pJS = function(tag_id, params){
         if(pJS.tmp.repulse_clicking == false){
 
           p.vx = p.vx_i;
-          p.vy = p.vy_i;
-        
+          p.vy = p.vy_i;        
         }
-
       }
-
     }
-
   }
-
 
   pJS.fn.modes.grabParticle = function(p){
 
@@ -1054,8 +1011,6 @@ var pJS = function(tag_id, params){
     }
 
   };
-
-
 
   /* ---------- pJS functions - vendors ------------ */
 
@@ -1385,7 +1340,6 @@ var pJS = function(tag_id, params){
 
   };
 
-
   pJS.fn.vendors.start = function(){
 
     if(isInArray('image', pJS.particles.shape.type)){
@@ -1397,17 +1351,11 @@ var pJS = function(tag_id, params){
 
   };
 
-
-
-
   /* ---------- pJS - start ------------ */
-
 
   pJS.fn.vendors.eventsListeners();
 
   pJS.fn.vendors.start();
-  
-
 
 };
 
@@ -1468,7 +1416,6 @@ function clamp(number, min, max) {
 function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
-
 
 /* ---------- particles.js functions - start ------------ */
 
@@ -1537,5 +1484,4 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
     }
   };
   xhr.send();
-
 };
