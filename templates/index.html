@@ -364,7 +364,7 @@
           {% for service in service %}
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{ service.delay_ms }}">
             <div class="icon"><i class="{{ service.icon}}"></i></div>
-            <h4>{{service.title }}</h4>
+            <h5>{{service.title }}</h5>
             <p class="description">{{ service.description | truncatewords:15 }}</p>
           </div>
           {% endfor %}
