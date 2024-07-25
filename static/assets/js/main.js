@@ -11,7 +11,7 @@
   }
 
   
-  particlesJS("particles-js", {
+  particlesJS("hero", {
   "particles": {
     "number": {
       "value": 200,
