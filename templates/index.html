@@ -5,7 +5,7 @@
 
 {% block main %}
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
+    <div class="hero-container">
       <h1>Dhruv Patel</h1>
       <p>I'm <span class="typed" data-typed-items="{% for word in word %}{{word.tags}},{% endfor %}"></span></p>
     </div>
@@ -356,7 +356,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>{{ content.services.title|capfirst }}</h2>
+          <h3>{{ content.services.title|capfirst }}</h3>
           <p>{{ content.services.description|capfirst }}</p>
          </div>
 
@@ -364,7 +364,7 @@
           {% for service in service %}
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{ service.delay_ms }}">
             <div class="icon"><i class="{{ service.icon}}"></i></div>
-            <p>{{service.title }}</p>
+            <h4>{{service.title }}</h4>
             <p class="description">{{ service.description | truncatewords:15 }}</p>
           </div>
           {% endfor %}
