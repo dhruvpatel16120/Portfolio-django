@@ -23,7 +23,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="/static/assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="/static/assets/img/profile-img.jpg" class="img-fluid" alt="Profile">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Digital Marketer &amp; Web Developer.</h3>
@@ -435,14 +435,12 @@
                 <h4>Linkedin Profile:</h4>
                 <a href="https://www.linkedin.com/in/dhruvpatel16120" class="btn btn-outline-primary m-4">Click Here</a>
               </div>
-
-              <iframe height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=palavasana,mehsana+(Dhruv%20Patel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a></iframe>
+              <iframe height="400" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=palavasana,mehsana+(Dhruv%20Patel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" title="maps"><a href="https://www.gps.ie/">gps systems</a></iframe>
             </div>
-
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="/#contact" method="post" role="form">
+            <form method="post">
               {% csrf_token %}
               <div class="row">
                 {% if messages %}
@@ -458,23 +456,21 @@
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="10" required></textarea>
               </div>
-              
               <div class="m-4 text-center">
                 <button class="btn btn-outline-primary p-2" type="submit">Send Message</button>
               </div>
-
             </form>
           </div>
         </div>
