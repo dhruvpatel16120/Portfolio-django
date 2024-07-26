@@ -125,10 +125,10 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
+      on('click', '#portfolio-flters li', function(f) {
+        f.preventDefault();
+        portfolioFilters.forEach(function(elf) {
+          elf.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
@@ -156,10 +156,10 @@
 
       let certificateFilters = select('#certificate-flters li', true);
 
-      on('click', '#certificate-flters li', function(e) {
-        e.preventDefault();
-        certificateFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
+      on('click', '#certificate-flters li', function(ef) {
+        ef.preventDefault();
+        certificateFilters.forEach(function(elf) {
+          elf.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
