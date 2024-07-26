@@ -143,8 +143,8 @@
 
   });
 
-  const certificateLightbox = GLightbox({
-    selector: '.certificate-lightbox'
+  const portfolioLightbox = GLightbox({
+    selector: '.portfolio-lightbox'
   });
 
   window.addEventListener('load', () => {
