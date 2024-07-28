@@ -1,0 +1,55 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom_admin.css' %}">
+    <style>
+        #datetime {
+            position: absolute;
+            top: 10px;
+            right: 35px;
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            #datetime {
+                font-size: 12px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #datetime {
+                font-size: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateDateTime() {
+                var now = new Date();
+                var formattedDateTime = now.toLocaleString();
+                document.getElementById('datetime').textContent = 'DATE: ' + formattedDateTime;
+            }
+
+            updateDateTime(); // Initial call to display the current date and time
+            setInterval(updateDateTime, 1000); // Update the date and time every second
+        });
+    </script>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="/static/logo.png" width="8%" style="margin: 8px;" alt="logo"><h2 style="display: inline;font-size: 1.5rem;">{{ site_header|default:_('Django administration') }}</h2></a></h1>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}
+    <div id="datetime"></div>
+{% endblock %}
