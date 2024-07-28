@@ -1,0 +1,13 @@
+#header {
+    background: linear-gradient(to bottom,rgb(9, 174, 224),#0e2570 70%);
+
+}
+
+#header #user-tools a{
+    color: rgb(247, 248, 252);
+    font-size: 14px;
+}
+
+#container {
+    box-shadow: 4px 4px 15px 15px rgba(15, 83, 160, 0.719);
+}
