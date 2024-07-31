@@ -116,7 +116,7 @@
     })
   }
 
-  window.addEventListener('load', () => {
+ window.addEventListener('load', () => {
   let portfolioContainer = select('.portfolio-container');
   if (portfolioContainer) {
     let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -140,10 +140,23 @@
       });
     }, true);
 
-    const defaultFilter = select('#portfolio-flters li[data-filter=".filter-websites"]');
-    if (defaultFilter) {
-      defaultFilter.click();
-    }
+    // Automatically switch to 'filter-websites' after 2 seconds
+    setTimeout(() => {
+      let defaultFilter = select('#portfolio-flters li[data-filter=".filter-websites"]');
+      if (defaultFilter) {
+        portfolioFilters.forEach(function(elf) {
+          elf.classList.remove('filter-active');
+        });
+        defaultFilter.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: defaultFilter.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh();
+        });
+      }
+    }, 2000); // 2000 milliseconds = 2 seconds
   }
 });
 
