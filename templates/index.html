@@ -1,173 +1,165 @@
 {% extends "base.html" %}
-{% block title %}{{tag.title}}{% endblock  %}
-{% block description %}{{tag.meta_description}}{% endblock  %}
-{% block keywords %}{{tag.meta_keywords}}{% endblock  %}
+{% block title %}{{ tag.title }}{% endblock %}
+{% block description %}{{ tag.meta_description }}{% endblock %}
+{% block keywords %}{{ tag.meta_keywords }}{% endblock %}
 {% block main %}
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container">
-      <h2>Dhruv Patel</h2>
-      <p>Welcome To My Website</p>
-      <p>I'm <span class="typed" data-typed-items="{% for word in word %}{{word.tags}},{% endfor %}"></span></p>
+        <h1>Dhruv Patel - Software Engineer & Digital Marketing Expert</h1>
+        <p>Welcome to My Professional Portfolio</p>
+        <p>I'm <span class="typed" data-typed-items="{% for word in word %}{{ word.tags }},{% endfor %}"></span></p>
     </div>
-  </section>
-  <main id="main">
+</section>
+
+<main id="main">
+    <!-- About Section -->
     <section id="about" class="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>{{ content.about.title |capfirst }}</h2>
-          <p>{{ content.about.description |capfirst }}</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="/static/assets/img/Dhruv-Patel.jpg" alt="Dhruv Patel - Software Engineer and Digital Marketing Expert" class="img-fluid" title="Dhruv Patel">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Engineer & Digital Marketing Expert</h3>
-            <p class="fst-italic">
-              Welcome to my professional portfolio, where I bring together the worlds of software development and digital marketing. I am passionate about creating high-quality, scalable web applications and implementing effective digital marketing strategies.
-            </p>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ content.about.title | capfirst }}</h2>
+                <p>{{ content.about.description | capfirst }}</p>
+            </div>
             <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>dhruvpatelofficial.vercel.app</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>digitaldhruv21@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ahmedabad,Gujarat</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Diploma </span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong><span>Listing Music,Reading...</span></li>
-                </ul>
-              </div>
+                <div class="col-lg-4">
+                    <img src="/static/assets/img/Dhruv-Patel.jpg" alt="Dhruv Patel - Software Engineer and Digital Marketing Expert" class="img-fluid" title="Dhruv Patel">
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                    <h3>About Me</h3>
+                    <p class="fst-italic">
+                        Welcome to my professional portfolio, where I bring together the worlds of software development and digital marketing. I am passionate about creating high-quality, scalable web applications and implementing effective digital marketing strategies.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>dhruvpatelofficial.vercel.app</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>digitaldhruv21@gmail.com</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ahmedabad, Gujarat</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Diploma</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> <span>Listening to Music, Reading...</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        I specialize in Python and Django development, focusing on building robust, secure, and scalable web applications. My skills in front-end technologies like Bootstrap 5 ensure that I can deliver seamless and responsive user experiences. This portfolio showcases a range of projects that demonstrate my problem-solving abilities, performance optimization, and functionality enhancement. As a digital marketing enthusiast, I use my technical skills to craft highly effective SEO and SEM strategies. I am proficient in creating data-driven campaigns, managing PPC advertising, and optimizing websites for search engines. My goal is to increase online visibility, drive traffic, and improve conversion rates through strategic digital marketing efforts.
+                    </p>
+                    <a class="cvb btn" href="/static/resume.pdf" Download="resume">Download Resume</a>
+                </div>
             </div>
-            <p>
-              I specialize in Python and Django development, focusing on building robust, secure, and scalable web applications. My skills in front-end technologies like Bootstrap 5 ensure that I can deliver seamless and responsive user experiences. This portfolio showcases a range of projects that demonstrate my problem-solving abilities, performance optimization, and functionality enhancement.
-              As a digital marketing enthusiast, I use my technical skills to craft highly effective SEO and SEM strategies. I am proficient in creating data-driven campaigns, managing PPC advertising, and optimizing websites for search engines. My goal is to increase online visibility, drive traffic, and improve conversion rates through strategic digital marketing efforts.
-            </p>
-            <a class="cvb btn" href="/static/resume.pdf" Download="resume">Download Resume</a>
-          </div>
         </div>
-
-      </div>
     </section>
-
-    <!-- ======= Facts Section ======= -->
+  
+    <!-- Facts Section -->
     <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>{{ content.facts.title |capfirst }}</h2>
-          <p>{{ content.facts.description |capfirst }}</p>
-        </div>
-
-        <div class="row no-gutters">
-
-        {% for fact in fact %}
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-              <div class="count-box">
-                <i class="{{fact.icon}}"></i>
-                <span data-purecounter-start="0" data-purecounter-end="{{fact.count}}" data-purecounter-duration="2" class="purecounter" aria-label="Skill Counter" aria-labelledby="Progress Bar"></span>
-                <p><strong>{{fact.title}}</strong></p>
-              </div>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ content.facts.title | capfirst }}</h2>
+                <p>{{ content.facts.description | capfirst }}</p>
             </div>
-        {% endfor %}
-        
+            <div class="row no-gutters">
+                {% for fact in fact %}
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="count-box">
+                        <i class="{{ fact.icon }}"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="{{ fact.count }}" data-purecounter-duration="2" class="purecounter" aria-label="Skill Counter" aria-labelledby="Progress Bar"></span>
+                        <p><strong>{{ fact.title }}</strong></p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-
-      </div>
     </section>
 
-    <!-- ======= Skills Section ======= -->
+    <!-- Skills Section -->
     <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>{{ content.skills.title|capfirst }}</h2>
-          <p>{{ content.skills.description|capfirst }}</p>
-        </div>
-
-        <div class="row skills-content">
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-
-            {% for skill in skill  %}
-              <div class="progress">
-              <span class="skill">{{skill.skill}}<i class="val">{{skill.percent}} %</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.percent}}" aria-valuemin="0" aria-valuemax="100" aria-label="Skill Counter" aria-labelledby="Progress Bar" ></div>
-              </div>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ content.skills.title | capfirst }}</h2>
+                <p>{{ content.skills.description | capfirst }}</p>
             </div>
-            {% endfor %}
-
-          </div>
+            <div class="row skills-content">
+                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+                    {% for skill in skill %}
+                    <div class="progress">
+                        <span class="skill">{{ skill.skill }}<i class="val">{{ skill.percent }}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Skill Counter" aria-labelledby="Progress Bar"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-
-    <!-- ======= Resume Section ======= -->
+  
+    <!-- Resume Section -->
     <section id="resume" class="resume">
       <div class="container">
-
+    
         <div class="section-title">
           <h2>{{ content.resume.title|capfirst}}</h2>
           <p>{{ content.resume.description|capfirst }}</p>
         </div>
-
+    
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Dhruv Patel</h4>
               <p><em>Welcome! I'm Dhruv Patel, a passionate software engineering student specializing in web development and digital marketing. With a strong foundation in front-end and back-end technologies, I am dedicated to creating dynamic, user-friendly websites that deliver exceptional user experiences.</em></p>
               <ul>
-                <li>Palavasana,Mehsana,Gujrat </li>
-                <li>digitaldhruv21@gmail.com </li>
+                <li>Palavasana, Mehsana, Gujarat</li>
+                <li>digitaldhruv21@gmail.com</li>
                 <li>https://dhruvpatelofficial.vercel.app/</li>
               </ul>
             </div>
-
+    
             <h3 class="resume-title">Education</h3>
             
             <div class="resume-item">
-              <h4>Diploma in Information Technology </h4>
-              <h5>2022 - Current </h5><br>
-              <h5>Grade: 9.10 CGPA</h5>
-              <p><em>Ranchhodlal  Chhotalal Technical Institute,Sola,Ahmedabad </em></p>
+              <h4>Diploma in Information Technology</h4>
+              <h5>2022 - Current</h5>
+              <h5>Grade: 9.15 CGPA</h5>
+              <p><em>Ranchhodlal Chhotalal Technical Institute, Sola, Ahmedabad</em></p>
               <a class="btn btn-outline-primary m-2" href="http://www.rcti.cteguj.in/"><em>College Website</em></a>
-              <p>Ranchhodlal Chhotalal Technical Institute (R C Technical Institute) was established in the memory of Shri Ranchhodlal Chhotalal, Rai Bahadur CIE by his grandson Chinubhai Madhowlal Ranchhodlal, in the year 1910 at Saraspur, Ahmedabad Gujarat India.</p>
+              <p>Ranchhodlal Chhotalal Technical Institute (RCTI) was established in the memory of Shri Ranchhodlal Chhotalal, Rai Bahadur CIE by his grandson Chinubhai Madhowlal Ranchhodlal, in the year 1910 at Saraspur, Ahmedabad, Gujarat, India.</p>
             </div>
             
-      <div class="resume-item">
-              <h4>10th ( Matriculation Certificate ) Board </h4>
-              <h5>2021 - 2022</h5><br>
+            <div class="resume-item">
+              <h4>10th (Matriculation Certificate) Board</h4>
+              <h5>2021 - 2022</h5>
               <h5>Grade: 94.63 Percentile (84 Percent)</h5>
-              <p><em>LAKSHYA PRIMARY SCHOOL,Gandhidham</em></p>
+              <p><em>LAKSHYA PRIMARY SCHOOL, Gandhidham</em></p>
               <a class="btn btn-outline-primary m-2" href="https://schools.org.in/kachchh/24011000709/lakshya-primary-school.html"><em>About School</em></a>
-              <p>Lakshya Primary School was established in 2008 and it is managed by the Pvt. Unaided. It is located in Rural area. It is located in GANDHIDHAM block of KACHCHH district of Gujrat. The school consists of Grades from 1 to 11. The school is Co-educational and it have an attached pre-primary section.</p>
+              <p>Lakshya Primary School was established in 2008 and it is managed by the Pvt. Unaided. It is located in a rural area of Gandhidham block of Kachchh district, Gujarat. The school consists of Grades from 1 to 11 and has an attached pre-primary section.</p>
             </div>
           </div>
-            
+          
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
                       
             <div class="resume-item">
               <h4>Internship at InfoLabz IT Services Pvt. Ltd.</h4>
-              <h5>june,2024 - Current</h5>
-              <p><em>405 Vraj Avenue, Above SAM'S Pizza, Nr Commerce Six Road, Navrangpura Ahmedabad, 380009</em></p>
+              <h5>June 2024 - Current</h5>
+              <p><em>405 Vraj Avenue, Above SAM'S Pizza, Nr Commerce Six Road, Navrangpura, Ahmedabad, 380009</em></p>
               <ul>
                 <li>Applied machine learning algorithms to analyze data sets and extract meaningful insights.</li>
                 <li>Developed predictive models using supervised and unsupervised learning techniques.</li>
                 <li>Collaborated with data scientists and engineers to deploy machine learning solutions.</li>
                 <li>Preprocessed data, performed feature engineering, and evaluated model performance.</li>
-             </ul>
+              </ul>
             </div>
-
-              <div class="resume-item">
+    
+            <div class="resume-item">
               <h4>Internship at InfoLabz IT Services Pvt. Ltd.</h4>
-              <h5>Aug,2023-Sep,2023 </h5>
-              <p><em>405 Vraj Avenue, Above SAM'S Pizza, Nr Commerce Six Road, Navrangpura Ahmedabad, 380009</em></p>
+              <h5>Aug 2023 - Sep 2023</h5>
+              <p><em>405 Vraj Avenue, Above SAM'S Pizza, Nr Commerce Six Road, Navrangpura, Ahmedabad, 380009</em></p>
               <ul>
                 <li>Learned and practiced Django framework fundamentals.</li>
                 <li>Assisted in developing web applications using Django, including models, views, and templates.</li>
@@ -175,250 +167,267 @@
                 <li>Gained hands-on experience with integrating Django applications with front-end technologies.</li>       
               </ul>
             </div>
-            
           </div>
         </div>
-
+    
       </div>
-    </section><!-- End Resume Section -->
-
-      <!-- ======= certificate Section ======= -->
-      <section id="certificate" class="certificate section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Certificate</h2>
-            <p>In this section, you will find a collection of my professional certifications that demonstrate my expertise, continuous learning, and commitment to excellence in the fields of software engineering, digital marketing, and web development. Each certification represents a milestone in my journey towards becoming a versatile and proficient professional, equipped with the skills and knowledge to tackle complex challenges and deliver exceptional results.</p>
-          </div>
-
-          <div class="row" data-aos="fade-up">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <ul id="certificate-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-pl">Programming Language</li>
-                <li data-filter=".filter-fw">Frameworks</li>
-                <li data-filter=".filter-dm">Digital Marketing</li>
-                <li data-filter=".filter-seo">SEO</li>
-                <li data-filter=".filter-ts">Tools</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="row certificate-container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-fw">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-1.jpg" class="img-fluid" alt="Django">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-1.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Django Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-dm">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-2.jpg" class="img-fluid" alt="Digital Marketing">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-2.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Digital Marketing Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-seo">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-3.jpg" class="img-fluid" alt="seo">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-3.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed SEO Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-ts">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-4.jpg" class="img-fluid" alt="Google Adwords">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-4.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Google Adwords"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-ts">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-5.jpg" class="img-fluid" alt="Google Analytics">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-5.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Google Analytics"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-dm">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-6.jpg" class="img-fluid" alt="PPC">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-6.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed PPC foundation"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-seo">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-7.jpg" class="img-fluid" alt="seo2">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-7.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed SEO Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-pl">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-8.jpg" class="img-fluid" alt="JS">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-8.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed JavaScript Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 certificate-item filter-pl">
-              <div class="certificate-wrap">
-                <img src="/static/assets/img/certificate/certificate-11.jpg" class="img-fluid" alt="python">
-                <div class="certificate-links">
-                  <a href="/static/assets/img/certificate/certificate-11.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Python Course"><i class="bx bx-zoom-in"></i></a>
-                </div>
-              </div>
-            </div>
-            
+    </section>
+  
+    <!-- ======= Certificate Section ======= -->
+    <section id="certificate" class="certificate section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certificate</h2>
+          <p>Explore my collection of professional certifications showcasing my expertise, continuous learning, and commitment to excellence in software engineering, digital marketing, and web development. Each certification marks a milestone in my journey towards becoming a versatile professional, equipped to tackle complex challenges and deliver exceptional results.</p>
+        </div>
+    
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="certificate-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-pl">Programming Language</li>
+              <li data-filter=".filter-fw">Frameworks</li>
+              <li data-filter=".filter-dm">Digital Marketing</li>
+              <li data-filter=".filter-seo">SEO</li>
+              <li data-filter=".filter-ts">Tools</li>
+            </ul>
           </div>
         </div>
-      </section><!-- End certificate Section -->
-
-    <!-- ======= Portfolio Section ======= -->
+    
+        <div class="row certificate-container">
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-fw">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-1.jpg" class="img-fluid" alt="Django Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-1.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Django Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-dm">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-2.jpg" class="img-fluid" alt="Digital Marketing Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-2.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Digital Marketing Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-seo">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-3.jpg" class="img-fluid" alt="SEO Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-3.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed SEO Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-ts">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-4.jpg" class="img-fluid" alt="Google Adwords Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-4.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Google Adwords"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-ts">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-5.jpg" class="img-fluid" alt="Google Analytics Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-5.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Google Analytics"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-dm">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-6.jpg" class="img-fluid" alt="PPC Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-6.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed PPC foundation"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-seo">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-7.jpg" class="img-fluid" alt="SEO Certification 2">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-7.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed SEO Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-pl">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-8.jpg" class="img-fluid" alt="JavaScript Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-8.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed JavaScript Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-pl">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-9.jpg" class="img-fluid" alt="JavaScript Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-9.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed JavaScript Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-pl">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-10.jpg" class="img-fluid" alt="JavaScript Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-10.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed JavaScript Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 certificate-item filter-pl">
+            <div class="certificate-wrap">
+              <img src="/static/assets/img/certificate/certificate-11.jpg" class="img-fluid" alt="Python Certification">
+              <div class="certificate-links">
+                <a href="/static/assets/img/certificate/certificate-11.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Python Course"><i class="bx bx-zoom-in"></i></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
-
+    
         <div class="section-title">
           <h2>{{ content.portfolio.title|capfirst }}</h2>
           <p>{{ content.portfolio.description|capfirst }}</p>
-         </div>
-
+        </div>
+    
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-             {% for cate in cate %}
-              <li data-filter=".filter-{{cate.portfolio_category}}">{{cate.portfolio_category}}</li>
+              {% for cate in cate %}
+                <li data-filter=".filter-{{cate.portfolio_category}}">{{cate.portfolio_category}}</li>
               {% endfor %}
             </ul>
           </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row portfolio-container">
           {% for port in portfolios %}
-          <div class="col-lg-4 col-md-6 portfolio-item filter-{{port.portfolio_category}}">
-            <div class="portfolio-wrap">
-              <img src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="/static/assets/img/portfolio/{{port.portfolio_image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{port.portfolio_name}}"><i class="bx bx-zoom-in"></i></a>
-                <a href="{{port.portfolio_url}}/" title="More Details"><i class="bx bx-link"></i></a>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{port.portfolio_category}}">
+              <div class="portfolio-wrap">
+                <img src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid" alt="{{ port.portfolio_name }}">
+                <div class="portfolio-links">
+                  <a href="/static/assets/img/portfolio/{{port.portfolio_image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{port.portfolio_name}}"><i class="bx bx-zoom-in"></i></a>
+                  <a href="{{port.portfolio_url}}/" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
               </div>
-            </div>
-          </div> 
+            </div> 
           {% endfor %}
-          
         </div>
-
+    
       </div>
     </section>
-
+    
+    <!-- Services Section -->
     <section id="services" class="services">
       <div class="container">
-
+    
         <div class="section-title">
           <h3>{{ content.services.title|capfirst }}</h3>
           <p>{{ content.services.description|capfirst }}</p>
-         </div>
-
+        </div>
+    
         <div class="row">
           {% for service in service %}
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{ service.delay_ms }}">
-            <div class="icon"><i class="{{ service.icon}}"></i></div>
-            <h3 class="m-2">{{service.title }}</h3>
-            <p class="description">{{ service.description | truncatewords:15 }}</p>
-          </div>
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="{{ service.delay_ms }}">
+              <div class="icon"><i class="{{ service.icon}}"></i></div>
+              <h3 class="m-2">{{service.title }}</h3>
+              <p class="description">{{ service.description | truncatewords:15 }}</p>
+            </div>
           {% endfor %}
-
         </div>
       </div>
     </section>
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
-
+    
         <div class="section-title">
           <h2>{{ content.reviews.title|capfirst }}</h2>
           <p>{{ content.reviews.description|capfirst }}</p>
-          </div>
-
+        </div>
+    
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-
+    
             {% for test in test %}
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  {{test.description}}
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="/static/assets/img/testimonials/{{test.image}}" class="testimonial-img" alt="{{test.name}}">
-                <h3>{{test.name}}</h3>
-                <h4>{{test.occupation}}</h4>
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{test.description}}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <img src="/static/assets/img/testimonials/{{test.image}}" class="testimonial-img" alt="{{test.name}}">
+                  <h3>{{test.name}}</h3>
+                  <h4>{{test.occupation}}</h4>
+                </div>
               </div>
-            </div>
             {% endfor %}
-
+    
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
+    
       </div>
     </section>
-
+    
+    <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
+    
         <div class="section-title">
           <h2>{{ content.contact.title|capfirst }}</h2>
           <p>{{ content.contact.description|capfirst }}</p>
-          </div>
-
+        </div>
+    
         <div class="row" data-aos="fade-in">
-
+    
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Mehasana,Gujarat,India</p>
+                <p>Mehsana, Gujarat, India</p>
               </div>
-
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>digitaldhruv21@gmail.com</p>
+                <p><a href="mailto:digitaldhruv21@gmail.com">digitaldhruv21@gmail.com</a></p>
               </div>
             </div>
           </div>
-
+    
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form method="post">
+            <form method="post" action="{% url 'contact' %}">
               {% csrf_token %}
               <div class="row">
                 {% if messages %}
-                {% for message in messages  %}
-                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-                  <strong>{{ message }}</strong>
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>          
-                {% endfor %}
+                  {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                      <strong>{{ message }}</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  {% endfor %}
                 {% endif %}
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -443,7 +452,9 @@
             </form>
           </div>
         </div>
+    
       </div>
     </section>
-  </main>
+  
+</main>
 {% endblock main %}
