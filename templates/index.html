@@ -323,7 +323,7 @@
           {% for port in portfolios %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-{{port.portfolio_category}}">
               <div class="portfolio-wrap">
-                <img src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid lazy-image" alt="{{ port.portfolio_name }}" loading="lazy">
+                <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid lazy-image" alt="{{ port.portfolio_name }}" loading="lazy">
                 <div class="portfolio-links">
                   <a href="/static/assets/img/portfolio/{{port.portfolio_image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{port.portfolio_name}}"><i class="bx bx-zoom-in"></i></a>
                   <a href="{{port.portfolio_url}}/" title="More Details"><i class="bx bx-link"></i></a>
@@ -377,7 +377,7 @@
                     {{test.description}}
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img src="/static/assets/img/testimonials/{{test.image}}" class="testimonial-img lazy-image" alt="{{test.name}}" loading="lazy">
+                  <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/testimonials/{{test.image}}" class="testimonial-img lazy-image" alt="{{test.name}}" loading="lazy">
                   <h3>{{test.name}}</h3>
                   <h4>{{test.occupation}}</h4>
                 </div>
