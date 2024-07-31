@@ -117,52 +117,35 @@
   }
 
  window.addEventListener('load', () => {
-  let portfolioContainer = select('.portfolio-container');
-  if (portfolioContainer) {
-    let portfolioIsotope = new Isotope(portfolioContainer, {
-      itemSelector: '.portfolio-item'
-    });
-
-    let portfolioFilters = select('#portfolio-flters li', true);
-
-    on('click', '#portfolio-flters li', function(f) {
-      f.preventDefault();
-      portfolioFilters.forEach(function(elf) {
-        elf.classList.remove('filter-active');
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
       });
-      this.classList.add('filter-active');
 
-      portfolioIsotope.arrange({
-        filter: this.getAttribute('data-filter')
-      });
-      portfolioIsotope.on('arrangeComplete', function() {
-        AOS.refresh();
-      });
-    }, true);
+      let portfolioFilters = select('#portfolio-flters li', true);
 
-    // Automatically switch to 'filter-websites' after 2 seconds
-    setTimeout(() => {
-      let defaultFilter = select('#portfolio-flters li[data-filter=".filter-websites"]');
-      if (defaultFilter) {
+      on('click', '#portfolio-flters li', function(f) {
+        f.preventDefault();
         portfolioFilters.forEach(function(elf) {
           elf.classList.remove('filter-active');
         });
-        defaultFilter.classList.add('filter-active');
+        this.classList.add('filter-active');
 
         portfolioIsotope.arrange({
-          filter: defaultFilter.getAttribute('data-filter')
+          filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh();
+          AOS.refresh()
         });
-      }
-    }, 2000); // 2000 milliseconds = 2 seconds
-  }
-});
+      }, true);
+    }
 
-const portfolioLightbox = GLightbox({
-  selector: '.portfolio-lightbox'
-});
+  });
+
+  const portfolioLightbox = GLightbox({
+    selector: '.portfolio-lightbox'
+  });
 
 window.addEventListener('load', () => {
     let certificateContainer = select('.certificate-container');
@@ -248,7 +231,7 @@ new PureCounter();
 particlesJS("hero", {
   "particles": {
     "number": {
-      "value": 250,
+      "value": 200,
       "density": {
         "enable": true,
         "value_area": 900
@@ -301,7 +284,7 @@ particlesJS("hero", {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 5,
       "direction": "none",
       "random": false,
       "straight": false,
