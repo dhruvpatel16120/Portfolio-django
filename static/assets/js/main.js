@@ -338,38 +338,63 @@ particlesJS("hero", {
   "retina_detect": true
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const lazyImages = document.querySelectorAll("img.lazy-image");
+document.addEventListener("DOMContentLoaded", function () {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
 
-  const lazyLoad = () => {
-    lazyImages.forEach(img => {
-      if (img.getBoundingClientRect().top < window.innerHeight && !img.srcset) {
-        const dataSrc = img.getAttribute("data-src");
-        if (dataSrc) {
-          img.src = dataSrc;
-          img.removeAttribute("data-src");
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazyload");
+          lazyImageObserver.unobserve(lazyImage);
         }
-      }
+      });
     });
-  };
 
-  // Initial load
-  lazyLoad();
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Fallback for browsers that don't support IntersectionObserver
+    let active = false;
 
-  // On scroll
-  window.addEventListener("scroll", lazyLoad);
+    const lazyLoad = function () {
+      if (active === false) {
+        active = true;
+
+        setTimeout(function () {
+          lazyImages.forEach(function (lazyImage) {
+            if (
+              lazyImage.getBoundingClientRect().top <= window.innerHeight &&
+              lazyImage.getBoundingClientRect().bottom >= 0 &&
+              getComputedStyle(lazyImage).display !== "none"
+            ) {
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.classList.remove("lazyload");
+
+              lazyImages = lazyImages.filter(function (image) {
+                return image !== lazyImage;
+              });
+
+              if (lazyImages.length === 0) {
+                document.removeEventListener("scroll", lazyLoad);
+                window.removeEventListener("resize", lazyLoad);
+                window.removeEventListener("orientationchange", lazyLoad);
+              }
+            }
+          });
+
+          active = false;
+        }, 200);
+      }
+    };
+
+    document.addEventListener("scroll", lazyLoad);
+    window.addEventListener("resize", lazyLoad);
+    window.addEventListener("orientationchange", lazyLoad);
+  }
 });
 
-// Wait for images to load before triggering Isotope layout
-var $grid = $('.portfolio-container').isotope({
-  // options
-  itemSelector: '.portfolio-item',
-  layoutMode: 'fitRows'
-});
-
-// When each image loads, trigger layout
-$grid.imagesLoaded().progress(function () {
-  $grid.isotope('layout');
-});
-  
 })()
