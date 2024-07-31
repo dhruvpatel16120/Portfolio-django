@@ -359,5 +359,17 @@ document.addEventListener("DOMContentLoaded", function() {
   // On scroll
   window.addEventListener("scroll", lazyLoad);
 });
+
+// Wait for images to load before triggering Isotope layout
+var $grid = $('.portfolio-container').isotope({
+  // options
+  itemSelector: '.portfolio-item',
+  layoutMode: 'fitRows'
+});
+
+// When each image loads, trigger layout
+$grid.imagesLoaded().progress(function () {
+  $grid.isotope('layout');
+});
   
 })()
