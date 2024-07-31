@@ -339,7 +339,7 @@ particlesJS("hero", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy-image"));
 
   if ("IntersectionObserver" in window) {
     let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazyload");
+          lazyImage.classList.remove("lazy-image");
           lazyImageObserver.unobserve(lazyImage);
         }
       });
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
               getComputedStyle(lazyImage).display !== "none"
             ) {
               lazyImage.src = lazyImage.dataset.src;
-              lazyImage.classList.remove("lazyload");
+              lazyImage.classList.remove("lazy-image");
 
               lazyImages = lazyImages.filter(function (image) {
                 return image !== lazyImage;
