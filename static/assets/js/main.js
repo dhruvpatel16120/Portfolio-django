@@ -397,4 +397,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+window.addEventListener('load', () => {
+  let portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+  let portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  portfolioFilters.forEach(filter => {
+    filter.addEventListener('click', (e) => {
+      e.preventDefault();
+      portfolioFilters.forEach(el => el.classList.remove('filter-active'));
+      filter.classList.add('filter-active');
+
+      let filterValue = filter.getAttribute('data-filter');
+      portfolioItems.forEach(item => {
+        if (filterValue === '*' || item.classList.contains(filterValue.substring(1))) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+  
 })()
