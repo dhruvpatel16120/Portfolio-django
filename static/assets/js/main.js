@@ -343,16 +343,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const lazyLoad = () => {
     lazyImages.forEach(img => {
-      if (img.getBoundingClientRect().top < window.innerHeight) {
-        img.src = img.getAttribute("data-src");
-        img.removeAttribute("data-src");
+      if (img.getBoundingClientRect().top < window.innerHeight && !img.srcset) {
+        const dataSrc = img.getAttribute("data-src");
+        if (dataSrc) {
+          img.src = dataSrc;
+          img.removeAttribute("data-src");
+        }
       }
     });
   };
 
-  window.addEventListener("scroll", lazyLoad);
-  lazyLoad(); // Trigger lazy loading on page load
-});
+  // Initial load
+  lazyLoad();
 
+  // On scroll
+  window.addEventListener("scroll", lazyLoad);
+});
   
 })()
