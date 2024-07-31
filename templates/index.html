@@ -22,7 +22,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="/static/assets/img/Dhruv-Patel.jpg" alt="Dhruv Patel - Software Engineer and Digital Marketing Expert" class="img-fluid" title="Dhruv Patel">
+                    <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/Dhruv-Patel.jpg" alt="Dhruv Patel - Software Engineer and Digital Marketing Expert" class="img-fluid lazy-image" title="Dhruv Patel"  loading="lazy">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Software Engineer & Digital Marketing Expert</h3>
@@ -198,7 +198,7 @@
     
           <div class="col-lg-4 col-md-6 certificate-item filter-fw">
             <div class="certificate-wrap">
-              <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/certificate/certificate-1.jpg" class="img-fluid lazy-image" alt="Django Certification" loading="lazy">
+              <img src="/static/assets/img/certificate/certificate-1.jpg" class="img-fluid" alt="Django Certification">
               <div class="certificate-links">
                 <a href="/static/assets/img/certificate/certificate-1.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Django Course"><i class="bx bx-zoom-in"></i></a>
               </div>
@@ -216,7 +216,7 @@
     
           <div class="col-lg-4 col-md-6 certificate-item filter-seo">
             <div class="certificate-wrap">
-              <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/certificate/certificate-3.jpg" class="img-fluid lazy-image" alt="SEO Certification" loading="lazy">
+              <img src="/static/assets/img/certificate/certificate-3.jpg" class="img-fluid" alt="SEO Certification">
               <div class="certificate-links">
                 <a href="/static/assets/img/certificate/certificate-3.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed SEO Course"><i class="bx bx-zoom-in"></i></a>
               </div>
@@ -225,7 +225,7 @@
     
           <div class="col-lg-4 col-md-6 certificate-item filter-ts">
             <div class="certificate-wrap">
-              <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/certificate/certificate-4.jpg" class="img-fluid lazy-image" alt="Google Adwords Certification" loading="lazy">
+              <img src="/static/assets/img/certificate/certificate-4.jpg" class="img-fluid" alt="Google Adwords Certification">
               <div class="certificate-links">
                 <a href="/static/assets/img/certificate/certificate-4.jpg" data-gallery="certificateGallery" class="certificate-lightbox" title="Certificate of completed Google Adwords"><i class="bx bx-zoom-in"></i></a>
               </div>
@@ -323,7 +323,7 @@
           {% for port in portfolios %}
             <div class="col-lg-4 col-md-6 portfolio-item filter-{{port.portfolio_category}}">
               <div class="portfolio-wrap">
-                <img src="/static/assets/img/placeholder.jpg" data-src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid lazy-image" alt="{{ port.portfolio_name }}" loading="lazy">
+                <img src="/static/assets/img/portfolio/{{port.portfolio_image}}" class="img-fluid" alt="{{ port.portfolio_name }}">
                 <div class="portfolio-links">
                   <a href="/static/assets/img/portfolio/{{port.portfolio_image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{port.portfolio_name}}"><i class="bx bx-zoom-in"></i></a>
                   <a href="{{port.portfolio_url}}/" title="More Details"><i class="bx bx-link"></i></a>
