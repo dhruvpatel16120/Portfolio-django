@@ -4,13 +4,13 @@
 {% block keywords %}{{ tag.meta_keywords }}{% endblock %}
 {% block main %}
 
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container">
-        <h1>Dhruv Patel</h1>
-        <p>Welcome to My Professional Portfolio</p>
-        <p>I'm <span class="typed" data-typed-items="{% for word in word %}{{ word.tags }},{% endfor %}"></span></p>
+      <h2>Dhruv Patel</h2>
+      <p>Welcome To My Website</p>
+      <p>I'm <span class="typed" data-typed-items="{% for word in word %}{{word.tags}},{% endfor %}"></span></p>
     </div>
-</section>
+  </section>
 
 <main id="main">
     <!-- About Section -->
