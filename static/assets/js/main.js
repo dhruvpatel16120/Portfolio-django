@@ -337,5 +337,22 @@ particlesJS("hero", {
   },
   "retina_detect": true
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const lazyImages = document.querySelectorAll("img.lazy-image");
+
+  const lazyLoad = () => {
+    lazyImages.forEach(img => {
+      if (img.getBoundingClientRect().top < window.innerHeight) {
+        img.src = img.getAttribute("data-src");
+        img.removeAttribute("data-src");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", lazyLoad);
+  lazyLoad(); // Trigger lazy loading on page load
+});
+
   
 })()
