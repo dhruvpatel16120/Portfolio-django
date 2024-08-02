@@ -33,7 +33,7 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin-d/', admin.site.urls),
     path('',views.home,name="home"),
     path('<str:portfolio_name>/',views.portfoliodetails,name="portfoliodetails"),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
