@@ -22,10 +22,10 @@
 
 <body>
   <main>
-    <div class="container">
-      <section class="section w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-in">
-        <img src="{% static 'nfound.png' %}" class="img-fluid" alt="Page not found">
-        <h1 class="display-1">404</h1>
+    <div class="container">      
+      <section class="section min-vh-100 d-flex flex-column align-items-center justify-content-center" >
+        <img src="/static/nfound.png" class="img-fluid" alt="not found">
+        <h1>404</h1>
         <h2>The page you are looking for doesn't exist.</h2>
         <a class="btn btn-primary mt-4" href="{% url 'home' %}">Back to Home</a>
       </section>
