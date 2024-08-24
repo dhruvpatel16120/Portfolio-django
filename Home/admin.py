@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.html import format_html
+from django.conf import settings
 from Home.models import SEO_tag,Type_words,Description,Fact,Service,Skill,Testimonial
 
 # Register your models here.
@@ -24,8 +26,15 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title','date')
 
 class TestimonialAdmin(admin.ModelAdmin):
-    list_display = ('name','occupation','date')
+    list_display = ('image_preview','name','occupation','date')
     search_fields = ('name','occupation','date')
+   
+    def image_preview(self, obj):
+        if obj.image:
+            image_url = settings.STATIC_URL + 'assets/img/testimonials/' + obj.image
+            return format_html('<img src="{}" style="max-width: 100px; max-height: 100px;" />', image_url)
+        else:
+            return 'No Image'
 
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(Service, ServiceAdmin)
