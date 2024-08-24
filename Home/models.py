@@ -64,7 +64,7 @@ class Skill(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=220)
-    occupation = models.CharField(max_length=220)
+    occupation = models.CharField(max_length=220,null=True)
     image = models.CharField(max_length=220)
     description = models.TextField()
     date = models.DateTimeField(auto_now=False, auto_now_add=True)
