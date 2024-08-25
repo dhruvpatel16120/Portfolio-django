@@ -784,7 +784,9 @@ section {
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
 }
-
+.arrow {
+ color: var(--color);
+}
 .contact .info h3 {
   padding: 0 0 0 60px;
   font-size: 22px;
