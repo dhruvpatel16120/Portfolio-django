@@ -5,12 +5,12 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #F78166;
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #F78166;
   text-decoration: none;
 }
 /*--------------------------------------------------------------
@@ -59,7 +59,7 @@ a:hover {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #021c3f;
+  background: #F12356;
   color:#fff;
   overflow-y: auto;
 }
