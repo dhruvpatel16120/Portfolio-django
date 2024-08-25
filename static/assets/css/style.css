@@ -89,7 +89,7 @@ a:hover {
 }
 
 #header .profile .social-links a {
-  font-size: 21px;
+  font-size: 16px;
   display: inline-block;
   background:#074965;
   color: #fff;
@@ -169,7 +169,7 @@ a:hover {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #03535e;
+  color: #09136D;
 }
 
 .nav-menu a:hover,
@@ -184,7 +184,7 @@ a:hover {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #2B348A;
 }
 
 /* Mobile Navigation */
