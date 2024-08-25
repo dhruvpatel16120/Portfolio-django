@@ -59,7 +59,7 @@ a:hover {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #F12356;
+  background: #05364B;
   color:#fff;
   overflow-y: auto;
 }
@@ -160,7 +160,7 @@ a:hover {
   align-items: center;
   color: #a8a9b4;
   padding: 9px 15px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   transition: 0.3s;
   font-size: 15px;
 }
