@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #00539c;
+  --bg-color: #15aae6;
   --color: #fff;
 }
 
@@ -204,7 +204,7 @@ a:hover {
   transition: all 0.4s;
   outline: none !important;
   background-color: var(--bg-color);
-  color: #000;
+  color: var(--color);
   width: 40px;
   height: 40px;
   display: inline-flex;
