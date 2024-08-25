@@ -275,7 +275,7 @@ section {
   overflow: hidden;
   color: #fff;
   background: #050505;
-  box-shadow: 0 0 16px 2px rgba(169, 6, 218, 0.493);
+  box-shadow: 0 0 16px 2px rgba(20, 157, 221, 0.493);
 }
 
 .section-bg {
@@ -292,7 +292,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #204dc9 ;
+  color: #204dc9;
 }
 
 .section-title h2::after {
@@ -301,7 +301,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #204dc9;
   bottom: 0;
   left: 0;
 }
@@ -316,7 +316,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: #12b5de;
 }
 
 .about .content ul {
