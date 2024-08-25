@@ -23,7 +23,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #05104C;
+  background: #fee715;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -177,14 +177,14 @@ a:hover {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: #00A4CCFF;
+  color: #fee715;
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #00A4CCFF;
+  color: #fee715;
 }
 
 /* Mobile Navigation */
@@ -247,7 +247,7 @@ a:hover {
 }
 
 #hero p span {
-  color: #149ddd;
+  color: #fee715;
   padding-bottom: 4px;
   letter-spacing: 1px;
 }
@@ -316,7 +316,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #12b5de;
+  color: #fee715;
 }
 
 .about .content ul {
@@ -332,13 +332,13 @@ section {
 
 .about .content ul strong {
   margin-right: 10px;
-  color : #12b5de;
+  color : #fee715;
 }
 
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: #fee715;
   line-height: 0;
 }
 
@@ -361,7 +361,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #149ddd;
+  color: #fee715;
   float: left;
   line-height: 0;
 }
@@ -371,7 +371,7 @@ section {
   line-height: 40px;
   display: block;
   font-weight: 700;
-  color: #f2f5f8;
+  color: #fee715;
   margin-left: 60px;
 }
 
@@ -423,7 +423,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #dce8f8;
+  background: #fee715;
   height: 10px;
 }
 
@@ -431,7 +431,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: #fee715;
 }
 
 /*--------------------------------------------------------------
@@ -459,14 +459,14 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: #444;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
+  color: #fee715;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -615,10 +615,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: #fee715;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid #fee715;
 }
 
 .services .icon i {
