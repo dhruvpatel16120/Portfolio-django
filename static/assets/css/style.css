@@ -247,10 +247,9 @@ a:hover {
 }
 
 #hero p span {
-  color: #fff;
+  color: #149ddd;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
 }
 
 @media (min-width: 1024px) {
