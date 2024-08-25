@@ -74,8 +74,8 @@ a:hover {
   display: block;
   max-width: 120px;
   height:120px;
-  border: 8px solid #444;
-  box-shadow: 1px 1px 8px 7px rgb(157, 154, 188);
+  border: 8px solid #00539CFF;
+  box-shadow: 1px 1px 8px 7px #A2A2A1FF;
 }
 
 #header .profile h1 {
