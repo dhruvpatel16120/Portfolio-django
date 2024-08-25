@@ -37,13 +37,13 @@ a:hover {
 
 .back-to-top i {
   font-size: 28px;
-  color: #000;
+  color: var(--color);
   line-height: 0;
 }
 
 .back-to-top:hover {
   background: #ebc034;
-  color: #000;
+  color: var(--color);
 }
 
 .back-to-top.active {
@@ -627,7 +627,7 @@ section {
 }
 
 .services .icon i {
-  color: #000;
+  color: var(--color);
   font-size: 24px;
   line-height: 0;
 }
@@ -772,7 +772,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #000;
+  color: var(--color);
   float: left;
   width: 44px;
   height: 44px;
