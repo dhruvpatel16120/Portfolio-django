@@ -183,14 +183,14 @@ a:hover {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: #137bf2;
+  color: #2787b8;
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #137bf2;
+  color: #2787b8;
 }
 
 /* Mobile Navigation */
@@ -783,9 +783,6 @@ section {
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
-}
-.arrow {
- color: var(--color);
 }
 .contact .info h3 {
   padding: 0 0 0 60px;
