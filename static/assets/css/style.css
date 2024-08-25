@@ -292,7 +292,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #204dc9;
+  color: #fee715;
 }
 
 .section-title h2::after {
@@ -301,7 +301,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #204dc9;
+  background:#fee715;
   bottom: 0;
   left: 0;
 }
