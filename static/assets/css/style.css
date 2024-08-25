@@ -10,7 +10,7 @@ a {
 }
 
 a:hover {
-  color: #F78166;
+  color: #fff;
   text-decoration: none;
 }
 /*--------------------------------------------------------------
@@ -59,7 +59,7 @@ a:hover {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #05364B;
+  background: #05104C;
   color:#fff;
   overflow-y: auto;
 }
@@ -68,8 +68,8 @@ a:hover {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
-  box-shadow: 0 1px 24px 0 rgba(178, 2, 247, 0.774);
+  border: 8px solid #fff;
+  box-shadow: 1px 1px 8px 13px rgb(22, 113, 166);
 }
 
 #header .profile h1 {
