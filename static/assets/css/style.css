@@ -385,7 +385,7 @@ section {
   margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #0a7e8d;
+  color: #fee715;
 }
 
 .facts .count-box a {
@@ -424,7 +424,7 @@ section {
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
-  color: #149ddd;
+  color: #fee715;
 }
 
 .skills .progress-bar-wrap {
@@ -627,7 +627,7 @@ section {
 }
 
 .services .icon i {
-  color: #fff;
+  color: #000;
   font-size: 24px;
   line-height: 0;
 }
@@ -637,7 +637,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: #fee715;
 }
 
 .services .title {
@@ -687,12 +687,12 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #035379;
+  color: #fee715;
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #f2f5f8;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -753,7 +753,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: #fee715;
 }
 
 /*--------------------------------------------------------------
@@ -772,11 +772,11 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #000;
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
+  background: #fee715;
   display: flex;
   justify-content: center;
   align-items: center;
