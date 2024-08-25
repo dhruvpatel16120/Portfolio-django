@@ -1,3 +1,8 @@
+:root {
+  --bg-color: #fee715;
+  --color: #000;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -23,7 +28,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #fee715;
+  background: var(--bg-color);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -197,7 +202,7 @@ a:hover {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #fee715;
+  background-color: var(--bg-color);
   color: #000;
   width: 40px;
   height: 40px;
@@ -247,7 +252,7 @@ a:hover {
 }
 
 #hero p span {
-  color: #fee715;
+  color: var(--bg-color);
   padding-bottom: 4px;
   letter-spacing: 1px;
 }
@@ -292,7 +297,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .section-title h2::after {
@@ -301,7 +306,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background:#fee715;
+  background:var(--bg-color);
   bottom: 0;
   left: 0;
 }
@@ -316,17 +321,12 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
-}
-
-.btn {
-  background:#fee715;
-  color:#000;
 }
 
 .about .content ul li {
@@ -337,13 +337,13 @@ section {
 
 .about .content ul strong {
   margin-right: 10px;
-  color : #fee715;
+  color : var(--bg-color);
 }
 
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #fee715;
+  color: var(--bg-color);
   line-height: 0;
 }
 
@@ -366,7 +366,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #fee715;
+  color: var(--bg-color);
   float: left;
   line-height: 0;
 }
@@ -385,7 +385,7 @@ section {
   margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .facts .count-box a {
@@ -424,7 +424,7 @@ section {
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .skills .progress-bar-wrap {
@@ -436,7 +436,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #fee715;
+  background-color: var(--bg-color);
 }
 
 /*--------------------------------------------------------------
@@ -620,10 +620,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #fee715;
+  background: var(--bg-color);
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #fee715;
+  border: 1px solid var(--bg-color);
 }
 
 .services .icon i {
@@ -637,7 +637,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .services .title {
@@ -687,7 +687,7 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #fee715;
+  color: var(--bg-color);
 }
 
 .testimonials .testimonial-item h4 {
@@ -776,7 +776,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #fee715;
+  background: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
