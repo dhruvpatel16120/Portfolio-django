@@ -68,8 +68,8 @@ a:hover {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 3px solid #03535e;
-  box-shadow: 1px 1px 8px 13px rgba(13, 118, 216, 0.425);
+  border: 8px solid #444;
+  box-shadow: 1px 1px 8px 7px rgb(157, 154, 188);
 }
 
 #header .profile h1 {
