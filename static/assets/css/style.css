@@ -169,7 +169,7 @@ a:hover {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #09136D;
+  color: #fff;
 }
 
 .nav-menu a:hover,
@@ -184,7 +184,7 @@ a:hover {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #2B348A;
+  color: #fff;
 }
 
 /* Mobile Navigation */
