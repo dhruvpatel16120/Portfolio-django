@@ -184,7 +184,7 @@ a:hover {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #fff;
+  color: #0f66f2;
 }
 
 /* Mobile Navigation */
