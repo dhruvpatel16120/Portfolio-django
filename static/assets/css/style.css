@@ -73,8 +73,8 @@ a:hover {
 }
 
 #header .profile h1 {
-  font-size: 24px;
-  margin: 0;
+  font-size: 26px;
+  margin-top: 2px;
   padding: 0;
   font-weight: 600;
   -moz-text-align-last: center;
@@ -89,13 +89,13 @@ a:hover {
 }
 
 #header .profile .social-links a {
-  font-size: 18px;
+  font-size: 21px;
   display: inline-block;
-  background: #091d77;
+  background:#074965;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
+  margin-right: 10px;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -104,7 +104,7 @@ a:hover {
 }
 
 #header .profile .social-links a:hover {
-  background: #149ddd;
+  background: #207EA6;
   color: #fff;
   text-decoration: none;
 }
