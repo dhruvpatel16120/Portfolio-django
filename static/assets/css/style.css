@@ -177,14 +177,14 @@ a:hover {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: #0f66f2;
+  color: #00A4CCFF;
 }
 
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #0f66f2;
+  color: #00A4CCFF;
 }
 
 /* Mobile Navigation */
