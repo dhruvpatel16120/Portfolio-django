@@ -6,14 +6,11 @@
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.9",
-        "maxLambdaSize": "15mb"
+        "buildCommand": "./build.sh"
       }
     }
   ],
-  "buildCommand": "./build.sh",
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/media/(.*)", "dest": "/media/$1" },
     { "src": "/(.*)", "dest": "DPO/wsgi.py" }
   ]
 }
