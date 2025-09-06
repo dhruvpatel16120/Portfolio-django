@@ -1,6 +1,9 @@
 # Portfolio-django ✨
 
 A sleek, responsive **Django-powered** personal portfolio website showcasing projects, built with an emphasis on **full-stack capabilities** and **SEO performance**.
+<div align="center">
+ <img src="static/logo.png" alt="logo" />
+</div>
 
 [🌐 Live Demo](https://django-portfolio-live.vercel.app/)
 
@@ -12,7 +15,7 @@ Here’s a quick look at the portfolio in action:
 
 | Desktop 💻 | Mobile 📱 |
 |------------|-----------|
-| ![Desktop Preview](https://via.placeholder.com/600x350?text=Portfolio+Desktop) | ![Mobile Preview](https://via.placeholder.com/250x500?text=Portfolio+Mobile) |
+| ![Desktop Preview](preview/desktop.png) | ![Mobile Preview](preview/mobile.png) |
 
 ---
 
