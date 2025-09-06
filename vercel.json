@@ -10,6 +10,7 @@
       }
     }
   ],
+  "buildCommand": "./build.sh",
   "routes": [
     {
       "src": "/static/(.*)",
