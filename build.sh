@@ -1,14 +1,17 @@
 #!/bin/bash
+set -e  # stop on first error
 
-# Build the project
-echo "Building the project..."
+echo "Installing pip if missing..."
+python3.9 -m ensurepip --upgrade
+python3.9 -m pip install --upgrade pip setuptools wheel
+
+echo "Installing dependencies..."
 python3.9 -m pip install -r requirements.txt
 
-echo "Make Migration..."
-python3.9 manage.py makemigrations --noinput
+echo "Applying migrations..."
 python3.9 manage.py migrate --noinput
 
-echo "Collect Static..."
+echo "Collecting static files..."
 python3.9 manage.py collectstatic --noinput --clear
 
-echo "build is over and output is generate in short time !....."
+echo "Build completed successfully!"
