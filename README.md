@@ -47,7 +47,7 @@ Portfolio-django/
 ├── static/             # Static assets (CSS, JS, images)
 ├── Home/               # Your Django app for homepage functionality
 ├── Contact\_And\_Feedback/  # App for handling contact/feedback
-├── DPO/                # Another Django app (name TBD)
+├── DPO/                # Main Folder
 ├── manage.py           # Django management script
 ├── requirements.txt    # Project dependencies
 ├── build.sh            # Build automation script
